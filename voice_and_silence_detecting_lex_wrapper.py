@@ -96,7 +96,8 @@ class VoiceAndSilenceDetectingLexClient:
             #else:
             #   self.logger.debug("voice has not been detected even once. not starting the silence detection counter")
 
-    def __decode_data(self, data):
+    @staticmethod
+    def __decode_data(data):
         return base64.b64decode(data)
 
     def voice_detected(self):
